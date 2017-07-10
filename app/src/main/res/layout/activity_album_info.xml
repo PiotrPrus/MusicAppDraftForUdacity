@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.prusp.musicappdraftforudacity.AlbumInfoActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="142dp"
+        android:layout_height="136dp"
+        app:srcCompat="@drawable/ac_dc_cover"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/album_summary_text_view"
+        android:layout_marginRight="16dp" />
+
+    <TextView
+        android:id="@+id/album_summary_text_view"
+        android:layout_width="188dp"
+        android:layout_height="138dp"
+        android:text="TextView"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/album_body_text_view"
+        android:layout_width="345dp"
+        android:layout_height="253dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:text="TextView"
+        app:layout_constraintLeft_toLeftOf="@+id/imageView2"
+        app:layout_constraintRight_toRightOf="@+id/album_summary_text_view"
+        tools:layout_editor_absoluteY="172dp" />
+
+</android.support.constraint.ConstraintLayout>
