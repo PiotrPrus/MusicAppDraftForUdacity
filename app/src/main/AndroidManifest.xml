@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".AlbumInfoActivity" />
-        <activity android:name=".ArtistInfoActivity"></activity>
+        <activity android:name=".ArtistInfoActivity" />
+        <activity android:name=".MusicStoreActivity"></activity>
     </application>
 
 </manifest>

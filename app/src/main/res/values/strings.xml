@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">MusicAppDraftForUdacity</string>
+    <string name="payment_library_description">The library that can be used for payments is called STRIPE. \n We can install this library by adding following line to build.gradle:
+    "compile 'com.stripe:stripe-android:4.1.1'". \n The lib can be used to store credit card details of our customers. CardInputWidget need to be used.
+        \n Next step is to transfer those card infos safely to STRIPE. This can be done by tokens.
+        \n Using token required Http post from onActivityResult method (for Android Pay) or the onSuccess callback (when using your own form).
+    </string>
+    <string name="official_page">official page</string>
+    <string name="text_about_artist">HERE WILL BE SOME ARTIST HISTORY, GENERAL INFO ETC</string>
+    <string name="album_summary_text">Here will be the information about album. Genre, artists, designer of the cover, etc etc</string>
+    <string name="album_main_text">Here is the place to put a list of tracks available on this specific album, their duration, special guests etc.</string>
+
 </resources>
