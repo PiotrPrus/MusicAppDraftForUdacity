@@ -9,5 +9,6 @@
     <string name="text_about_artist">HERE WILL BE SOME ARTIST HISTORY, GENERAL INFO ETC</string>
     <string name="album_summary_text">Here will be the information about album. Genre, artists, designer of the cover, etc etc</string>
     <string name="album_main_text">Here is the place to put a list of tracks available on this specific album, their duration, special guests etc.</string>
+    <string name="back_to_listening">Back to listening</string>
 
 </resources>

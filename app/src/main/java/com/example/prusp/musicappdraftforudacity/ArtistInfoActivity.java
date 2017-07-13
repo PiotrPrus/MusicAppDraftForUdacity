@@ -19,4 +19,9 @@ public class ArtistInfoActivity extends AppCompatActivity {
         openPageIntent.setData(Uri.parse("http://www.acdc.com/"));
         startActivity(openPageIntent);
     }
+
+    public void backToListening(View view) {
+        Intent backToMainIntent = new Intent(this, MainActivity.class);
+        startActivity(backToMainIntent);
+    }
 }
