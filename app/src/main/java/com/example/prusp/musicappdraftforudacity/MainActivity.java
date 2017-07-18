@@ -5,8 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    public TextView artistNameTextView;
+    public ImageView artistCoverImageView;
+    public ImageButton musicStoreImageButton;
 
     private boolean isDrawableAPauseIcon=false;
 
@@ -14,6 +20,46 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initClickableViews();
+    }
+
+    private void initClickableViews() {
+        initClickableArtistTextView();
+        initClickableCoverImageView();
+        initClickableMusicStoreImageButton();
+    }
+
+    private void initClickableMusicStoreImageButton() {
+        musicStoreImageButton = (ImageButton)findViewById(R.id.music_store_image_button);
+        musicStoreImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent musicStoreIntent = new Intent(MainActivity.this, MusicStoreActivity.class);
+                startActivity(musicStoreIntent);
+            }
+        });
+    }
+
+    private void initClickableCoverImageView() {
+        artistCoverImageView = (ImageView)findViewById(R.id.album_cover_image_view);
+        artistCoverImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent albumInfoIntent = new Intent(MainActivity.this, AlbumInfoActivity.class);
+                startActivity(albumInfoIntent);
+            }
+        });
+    }
+
+    private void initClickableArtistTextView() {
+        artistNameTextView = (TextView)findViewById(R.id.artist_name_text_view);
+        artistNameTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent artistInfoIntent = new Intent(MainActivity.this, ArtistInfoActivity.class);
+                startActivity(artistInfoIntent);
+            }
+        });
     }
 
     public void playButtonOnClick(View view) {
@@ -26,20 +72,5 @@ public class MainActivity extends AppCompatActivity {
             isDrawableAPauseIcon=true;
         }
 
-    }
-
-    public void openAlbumInfoActivity(View view) {
-        Intent albumInfoIntent = new Intent(this, AlbumInfoActivity.class);
-        startActivity(albumInfoIntent);
-    }
-
-    public void openAboutArtistActivity(View view) {
-        Intent artistInfoIntent = new Intent(this, ArtistInfoActivity.class);
-        startActivity(artistInfoIntent);
-    }
-
-    public void openMusicStoreActivity(View view) {
-        Intent musicStoreIntent = new Intent(this, MusicStoreActivity.class);
-        startActivity(musicStoreIntent);
     }
 }
