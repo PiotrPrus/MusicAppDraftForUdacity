@@ -12,5 +12,7 @@
     The necessary info will be taken froom official artist site. The list could be store in ArrayList of Object "Track". \n
         This Track would be a java class that contains String as a title, int as duration and second string with additional info.</string>
     <string name="back_to_listening">Back to listening</string>
+    <string name="now_playing">NOW PLAYING \n\n This is the main activity of music app. On this screen you can play music using buttons below. \n There is a button to previous song, next song and play/pause. \n
+    From this screen you can switch to another screens like: album details, artist page and store. </string>
 
 </resources>
